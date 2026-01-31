@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💖🥺Sorpresa de Cumpleaños para thi Baby🥺💖</title>
+
+<style>
+body{
+ margin:0;
+ font-family:'Segoe UI',sans-serif;
+ overflow-x:hidden;
+ background:linear-gradient(270deg,#ff9acb,#d9a7ff,#ffb6d5);
+ background-size:600% 600%;
+ animation:gradientBG 12s ease infinite;
+}
+@keyframes gradientBG{
+ 0%{background-position:0% 50%}
+ 50%{background-position:100% 50%}
+ 100%{background-position:0% 50%}
+}
+
+/* LLUVIA */
+.particle{
+ position:fixed;
+ top:-50px;
+ pointer-events:none;
+ animation:fall linear infinite;
+ z-index:0;
+}
+@keyframes fall{
+ to{transform:translateY(110vh) rotate(360deg);}
+}
+
+/* BLOQUEO */
+#lock{
+ position:fixed;
+ inset:0;
+ background:
+ linear-gradient(rgba(255,182,193,0.7),rgba(255,182,193,0.7)),
+ url("portada.jpg");
+ background-size:cover;
+ background-position:center;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ z-index:9999;
+}
+.lock-box{
+ background:rgba(255,255,255,0.3);
+ padding:30px;
+ border-radius:25px;
+ backdrop-filter:blur(8px);
+ text-align:center;
+}
+.lock-box input{
+ padding:10px;
+ border:none;
+ border-radius:10px;
+ width:200px;
+}
+.lock-box button{
+ margin-top:15px;
+ padding:10px 25px;
+ border:none;
+ border-radius:20px;
+ background:#ff5fa2;
+ color:white;
+ font-size:16px;
+ cursor:pointer;
+}
+#error{color:red; display:none}
+
+/* CONTENIDO */
+#content{display:none; padding:20px; position:relative; z-index:1}
+.page{display:none; text-align:center}
+.page.active{display:block}
+h2{color:white}
+
+/* FOTOS */
+.frames{
+ display:flex;
+ justify-content:center;
+ gap:15px;
+ flex-wrap:wrap;
+}
+.frame{
+ border:5px solid #ff7eb3;
+ border-radius:15px;
+ overflow:hidden;
+ max-width:400px;
+}
+.frame img{width:100%}
+
+/* TEXTO */
+.page-text,.final-text{
+ background:rgba(255,255,255,0.3);
+ padding:15px;
+ border-radius:15px;
+ margin-top:10px;
+ font-size:16px;
+}
+
+/* BOTONES */
+.nav{
+ margin-top:15px;
+ padding:12px 30px;
+ border:none;
+ border-radius:25px;
+ background:#ff5fa2;
+ color:white;
+ font-size:16px;
+ cursor:pointer;
+}
+
+/* EXPLOSIÓN */
+.heart{
+ position:fixed;
+ font-size:20px;
+ animation:explode 1s forwards;
+ pointer-events:none;
+}
+@keyframes explode{
+ to{
+  transform:translate(var(--x),var(--y)) scale(0);
+  opacity:0;
+ }
+}
+
+/* CARRUSEL */
+.carousel{
+ max-width:700px;
+ margin:20px auto;
+ overflow:hidden;
+ border-radius:20px;
+}
+.carousel-track{
+ display:flex;
+ animation:scroll 30s linear infinite;
+}
+.carousel img{
+ width:700px;
+ flex-shrink:0;
+}
+@keyframes scroll{
+ 0%{transform:translateX(0)}
+ 100%{transform:translateX(-1000%)}
+}
+
+/* TEXTO FINAL */
+.final-text{
+ background:rgba(255,255,255,0.35);
+ padding:20px;
+ border-radius:20px;
+ font-size:18px;
+ margin-top:20px;
+ animation:fadeIn 3s ease;
+}
+@keyframes fadeIn{
+ from{opacity:0; transform:scale(0.9)}
+ to{opacity:1}
+}
+</style>
+</head>
+
+<body>
+
+<!-- LLUVIA -->
+<div id="rain"></div>
+
+<!-- BLOQUEO -->
+<div id="lock">
+ <div class="lock-box">
+  <h1>🎁Sorpresa Especial🎁</h1>
+  <p>Ingresa la contraseña 💖</p>
+  <input id="password" type="password">
+  <br><br>
+  <button onclick="checkPassword()">💕Entrar💕</button>
+  <p id="error">Contraseña incorrecta</p>
+ </div>
+</div>
+
+<div id="content">
+
+<audio id="musicMain" loop>
+ <source src="musica.mp3">
+</audio>
+
+<audio id="musicFinal" loop>
+ <source src="musica_final.mp3">
+</audio>
+
+<!-- PÁGINAS 1 A 8 -->
+<div class="page active">
+ <h1>🎂❤️🥺Feliz Cumpleaños Mi amor🥺❤️🎂</h1>
+ <h3>Posdata (ya estas viejita)na broma jeje🤭🤭😅 </h3>
+ <div class="frames"><div class="frame"><img src="fotos/1.jpg"></div><div class="frame"><img src="fotos/2.jpg"></div></div>
+ <div class="page-text">Eh aver nose por donde empezar jeje🥺💗bno ps desearte un muy buen feliz cumpleaños espero que la pases super🥺💗 yo no estoy presente no🥲 pero eso no me impidio hacer este detalle para thi🤭🥺❤️ me tarde dias en hacerlo pero quedo bonito jiji 
+bno bno me desvie desearte un muy feliz cumpleaños mi amor🤭🥺❤️que se cumplan todos tus deseos y sueños, yo siempre estare a thu lado para apoyarte shii🥺❤️ subiendo cada escalon contigo avanzando pasito a pasito, 
+eres la mejor de todas y te mereces todo lo bueno🥺❤️ gracias por permitirme amarte, quizas cuando estes leyendo ya habras perdido comunicacion conmigo temporalmente no, no sera por siempre ahurita ya solo faltaria 10 meses mas aunq es mucho pero igual pasara muy rapido y nos volveremos a ver y abrazarnos, te amo mi bebita hermosha🥺❤️ casi siempre ando pensando en thi y lo sabes jeje decirte q yo te amo demasiado para dejarte y serte infiel... confia en mi palabra yo te amo de veritas...
+y te lo vuelvo a repetir FELIZ CUMPLEAÑOS🎂🥳🎁🎊🎈 A LA NIÑA MAS HERMOSA, A MI MI PRINCESA, A MI REYNA, A MI AMANTE NA BROMA JEJE😅😅 ,A MI MUNDO, MY LOVE, MI AMIGA, MI AMOR, MI COMPAÑERA, MI TODO , MI COMPLEMENTO..... TEEEEEEE AAAAAAAAAAAAAAAMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOO MUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUCHHO💗❤️🥺❤️💖</div>
+ <button class="nav" onclick="nextPage()">Siguiente</button>
+</div>
+
+<div class="page">
+ <h1> 🥺🤭Es hora del pastel, no comas en exceso sinos estaras bola y ya no te quedre jijij broma mi amor tenes q comer muchito tenes q estar alimentaditaa🥺🤭</h1>
+ <div class="frames"><div class="frame"><img src="fotos/3.jpg"></div><div class="frame"><img src="fotos/4.jpg"></div></div>
+ <div class="page-text">Ya es hora de morder el pastel🤭🥺 nms te no enbarres toda Thu carita Mosha❤️🤭 me sobras pa mi jiji🫶🏻🥺 
+Cuando llegue el día te llenare de besitos y abrazos... Te debo un regalo ahora jiji🥺 y no te preocupes te lo daré shii😊❤️ te mereces todo mi amor🥺🫶🏻💗 eres la chica q yo tanto había buscado.... Pero en este caso yo ya no busque llegaste de la nd a cambiar mi vida🫶🏻🥺😊 y te lo agradezco siempre  
+Ahora come Thu tortita🥺🤭 q sinos se lo come Thu pancita na broma jsjsj pero come Shi🥺🫶🏻 
+Ahí tambn te han debido preparar Thu plato favorito así  q comer este día tenés q pasarla a full así wonito por más cosas q haya es Thu dia y debes disfrutarlo🥺💗❤️  
+Eh ya nose q más decirte osea hay arto pero en las otras páginas te iré diciendo tambn😅🤭 neta te extraño demasiado😖 pero BN el tiempo pasa rápido y ya nos veremos otra vez de eso estoy seguro... 
+Y nd PS yo quiero todo contigo te dije🥺 sin thi nd ya te dije jeje así q tenés q estar Thu🥺❤️ 
+Te amoooo muuuucho así cm vaca Thu❤️🥺🐄🐮</div>
+ <button class="nav" onclick="nextPage()">Siguiente</button>
+</div>
+
+<div class="page">
+ <h1>🌸🥺❤️ ABRAZOTE PARA LA PRINCESA🌸🥺❤️</h1>
+ <div class="frames"><div class="frame"><img src="fotos/5.jpg"></div><div class="frame"><img src="fotos/6.jpg"></div></div>
+ <div class="page-text">Recuerdas nuestro primer abrazo🤭 aunq creo q Thu me diste nv en mi cumple❤️🥺 el 2023 hasta cajita me diste jiji yo no esperaba recibir nd🙃🥺 pero ahí tabas Thu me diste eso jiji ahí faltaba beso más😅🤭 de a poco los abrazos se hicieron más costumbre y ya era cada momento que estábamos🥺 extraño darte abrazo😖  
+Y el último fue allá donde tipo lloramos ambos😖🥺 ay bebita❤️
+Pero bn hay q estar BN y tratar de no tar mal Shi🥺 si Thu tas BN yo yo BN si Thu tas mal yo tmbn toy mal❤️🥺 
+Ufff ya huele a q no te vayas de meses na broma jiji😅🤭 tenés q reír mi amor🫂🥺 💗</div>
+ <button class="nav" onclick="nextPage()">Siguiente</button>
+</div>
+
+<div class="page">
+ <h1>💖💗😊BESITO PARA THI❤️🥺 JIJIJI</h1>
+ <div class="frames"><div class="frame"><img src="fotos/7.jpg"></div><div class="frame"><img src="fotos/8.jpg"></div></div>
+ <div class="page-text">Creo q en cada página te voy a hacer recuerdo de algo😅🤭 
+Acá PS nuestro primer beso🥺 fue de piquito yo quería más pero eras mala😑y no me diste jeje pero ya después hubo beso beso y más beso 
+Beso con lengua y todo jiji🤭🥺 te infle cachetitos🤭🥺 te mordi lengüita Thu tambn me mordiste y así me metiste legua y yo a Thi🤭😅🥺❤️ 
+Besos así q nos dejaban así feliz🤭❤️ 
+Ay che ya me eh de llorar yo😅🤭 recordar es wonito ps o no🥺 besos besos y muchos besos para Thi por todo Thu cuerpecito🤭❤️🥺🫶🏻💘</div>
+ <button class="nav" onclick="nextPage()">Siguiente</button>
+</div>
+
+<div class="page">
+ <h1>✨Preciosa jiji❤️🥺 me traes Lokito por Thi🥺🤤🤭</h1>
+ <div class="frames"><div class="frame"><img src="fotos/9.jpg"></div><div class="frame"><img src="fotos/10.jpg"></div></div>
+ <div class="page-text">Dónde está Kathy ahí está jiji🥺🫶🏻❤️ mosha cm siempre... Jiji te amo wonita monita cerdita😅🤭 broma jiji 
+En cualquier foto sales wonita🥺 siempre sonriendo😅 yo nms todo serio jiji😅 
+Pero BN jeje extraño ver Thu carita jalarte Thu pelo🤭😅 aunq no te gusta jeje agarrarte y besarte a la fuerza  ay mi niña hermosha no sabes cuánto yo te amo🥺❤️ jiji✨</div>
+ <button class="nav" onclick="nextPage()">Siguiente</button>
+</div>
+
+<div class="page">
+ <h1>🌹🤭❤️🥺🐖🐷Kathy puerquita🐷🐖🥺❤️🤭</h1>
+ <div class="frames"><div class="frame"><img src="fotos/11.jpg"></div><div class="frame"><img src="fotos/12.jpg"></div></div>
+ <div class="page-text">Sos chanchita nv🤭❤️jiji te vas a bañar yaa🤭🤭 no quiero q estés sucia😅😅 tenés q lavarte desde la cabeza hasta la puntita de tus pies jiji🤭 paticas paticas🥺🤭 nose jijiji verte me da tanta felicidad un abrazo calma todo para mí... Dándonos un beso es cm si se deteniera quisiera estar para siempre así🥲🥲 pero no sé puede jiji...💝</div>
+ <button class="nav" onclick="nextPage()">Siguiente</button>
+</div>
+
+<div class="page">
+ <h1>💫💗❤️🥺Yo ando preocupado por Thi🥺❤️💗</h1>
+ <div class="frames"><div class="frame"><img src="fotos/13.jpg"></div><div class="frame"><img src="fotos/14.jpg"></div></div>
+ <div class="page-text">Y aúnq me digas o me obligues a que no lo haga jamás lo are cm te dije si Thu estás BN yo estoy BN si Thu estás mal yo estaré mal
+Por eso quiero q Thu estés BN 
+Mira Thu sonrisita🤭🥺❤️ amo jiji 
+No dejes de sonreír shii🥺💗 Thu sonríe lo más que puedas q la sonrisa es el arma más fuerte dónde demuestras Thu seguridad 
+Espero estés comiendo🥺 almorzado así cm cenando y tomando Thu tecito y desayuna ojo enserio te lo digo tenés q desayunar mi amor🥺 haceme caso Shi🥺💗 
+Así q la comida no tienes q faltar mi amor estómaguito  llenó corazón contento y Lionel tambn viste😅🤭 
+Jiji así q comes ahora quizás esté lloviendo allá igual queiro q te tapes BN en la noche además hace frío y cuando sales abrigate muuuucho pa q no sientas frío🥺 
+Siempre ten cuidado dónde vas siempre atenta a todo🥺 no tienes q distraerte cualquier cosa pasa y no quiero q te pase nadita😖 así q por eso te me tenés q cuidar muchito Shi🥺 
+De dormír ps no quiero q duermas tarde siii haces tus deberes y tienes q dormir tempranito... No te me desveles mucho🥺 
+Mm hay algo q me olvidó mm ns jeje aver aver... 
+Ahh si tas enfermita tratas de recuperarte lo más pronto posible🥺 no tienes q empeorar tienes q mejorar Shi🥺🫶🏻🫂 tomas mates o algo para el dolor
+Ahh y esto más importante cuando tes en tus días procura cuidarte muuuucho Shi no tomes ni comas cosas q te hagan mal🥺 sinos luego estarás con dolores y eso es malo muy malo así q cuídate de eso mucho Shi🥺💗🫶🏻
+Portate bien jeje😅🤭 na ensiro te me portan BN🙃🙃 sii...💞</div>
+ <button class="nav" onclick="nextPage()">Siguiente</button>
+</div>
+
+<div class="page">
+ <h1>💘🥺💗Juntos Thu y yo🥺💗</h1>
+<h1> ❤️💗🥺L y K🥺💗❤️</h1>
+<h1>❤️💗🥺K y L🥺💗❤️</h1>
+ <div class="frames"><div class="frame"><img src="fotos/15.jpg"></div><div class="frame"><img src="fotos/16.jpg"></div></div>
+ <div class="page-text">Bno acá casi llegando al final jeje 
+Cm te dije yo quiero todo contigo yo nunca así mire nd al futuro con alguien🥺 contigo fue diferente🥺💗 quiero todo hasta hijos quiero cosas q yo nunca quise😅🤭 pero BN contigo los quiero tener quiero q formemos una familia jijiji🥺 
+Yo se q podemos talvez haya tropiezos pero eso son pequeñas pruebas q debemos avanzar no debemos dejar q eso nos gane para así poder salir adelante juntos 🥺💗 
+Te amo demasiado no por Thu cuerpito mosho🤭 te amo más xq Thu me das esa paz q nadie me da ese cariño q nunca me dieron esa sensación de estar seguro a Thu lado💗🥺 
+Gracias por llevar a mi vida y siempre te lo voy a agradecer🥺💗❤️ gracias Thu yo soy una mejor persona capas ubiera seguido cn mis vicios y acaba mal ns 
+Pero BN no pensar en ello y vivir el presente❤️💗🥺 
+Te amoo mi bebita hermosha🥺💗❤️ 
+Ya estás viejita jiji pero para mí siempre será mi bebita a la que hay darle mucho pero mucho amor🤭🤭 jiji💝</div>
+ <button class="nav" onclick="nextPage()">Siguiente</button>
+</div>
+
+<!-- PÁGINA 9 - CARRUSEL FINAL -->
+<div class="page">
+ <h2>💞 Nuestro Amor 💞</h2>
+
+ <div class="carousel">
+  <div class="carousel-track">
+   <img src="carrusel/1.jpg"><img src="carrusel/2.jpg"><img src="carrusel/3.jpg"><img src="carrusel/4.jpg"><img src="carrusel/5.jpg">
+   <img src="carrusel/6.jpg"><img src="carrusel/7.jpg"><img src="carrusel/8.jpg"><img src="carrusel/9.jpg"><img src="carrusel/10.jpg">
+  </div>
+ </div>
+
+ <div class="final-text" id="typeText"></div>
+
+ <button class="nav" onclick="goStart()">🔁 Volver al inicio</button>
+</div>
+
+</div>
+
+<script>
+const CLAVE="25/09/23";
+let i=0;
+const pages=document.querySelectorAll(".page");
+
+function checkPassword(){
+ if(password.value===CLAVE){
+  lock.style.display="none";
+  content.style.display="block";
+  musicMain.play();
+ }else error.style.display="block";
+}
+
+function nextPage(){
+ explosion();
+ pages[i].classList.remove("active");
+ i++;
+ pages[i].classList.add("active");
+
+ if(i===pages.length-1){
+  musicMain.pause();
+  musicFinal.play();
+  setTimeout(typeWriter,500);
+ }
+}
+
+function goStart(){
+ musicFinal.pause();
+ musicMain.currentTime=0;
+ musicMain.play();
+ pages[i].classList.remove("active");
+ i=0;
+ pages[i].classList.add("active");
+}
+
+/* LLUVIA de pétalos, corazones y globos */
+const icons=["💖","🌸","🎈"];
+setInterval(()=>{
+ const p=document.createElement("div");
+ p.className="particle";
+ p.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+ p.style.left=Math.random()*100+"vw";
+ p.style.fontSize=20+Math.random()*20+"px";
+ p.style.animationDuration=4+Math.random()*4+"s";
+ document.body.appendChild(p);
+ setTimeout(()=>p.remove(),8000);
+},300);
+
+/* EXPLOSIÓN */
+function explosion(){
+ for(let j=0;j<20;j++){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="💖";
+  h.style.left="50%";
+  h.style.top="50%";
+  h.style.setProperty("--x",(Math.random()*400-200)+"px");
+  h.style.setProperty("--y",(Math.random()*400-200)+"px");
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),1000);
+ }
+}
+
+/* TEXTO FINAL LETRA POR LETRA */
+const mensaje=`💖✨
+TE AMÉ AYER 💘
+TE AMO HOY 💞
+TE AMARÉ SIEMPRE 💝
+
+Con cariño 💌
+Lionel
+más conocido como Piolín 🐥💛`;
+
+function typeWriter(){
+ const el=document.getElementById("typeText");
+ let x=0;
+ el.innerHTML="";
+ const t=setInterval(()=>{
+  el.innerHTML+=mensaje.charAt(x);
+  x++;
+  if(x>=mensaje.length) clearInterval(t);
+ },70);
+}
+</script>
+
+</body>
+</html>
